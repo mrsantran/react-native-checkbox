@@ -102,6 +102,5 @@ Pull requests are welcome. If you want to change API or making something big bet
 **MIT Licensed**
 
 To support this project, you can make a donation to its current maintainer:
-qrencode "bitcoin:17grbSNSEcEybS1nHh4TGYVodBwT16cWtc" -lQ -o- | display
-qrencode "ethereum:0xa2fd119a619908d53928e5848b49bf1cc15689d4" -lQ -o- | display
-qrencode "ether:0xa2fd119a619908d53928e5848b49bf1cc15689d4" -lQ -o- | display
+[![Donate](https://img.shields.io/badge/Donate-Bitcoin-yellow.svg)](17grbSNSEcEybS1nHh4TGYVodBwT16cWtc)
+[![Donate](https://img.shields.io/badge/Donate-Ethereum-green.svg)](0xa2fd119a619908d53928e5848b49bf1cc15689d4)
