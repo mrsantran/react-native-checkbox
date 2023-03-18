@@ -1,10 +1,9 @@
 # @chainsoft/react-native-checkbox
 
-[ ![release](https://img.shields.io/github/release/mrsantran/react-native-checkbox.svg?maxAge=2592000?style=flat-square)](https://github.com/mrsantran/react-native-checkbox/releases)
 [ ![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/mrsantran/react-native-checkbox/pulls)
-[ ![NPM version](http://img.shields.io/npm/v/react-native-checkbox.svg?style=flat)](https://www.npmjs.com/package/@chainsoft/react-native-checkbox)
+[ ![NPM version](http://img.shields.io/npm/v/@chainsoft/react-native-checkbox.svg?style=flat)](https://www.npmjs.com/package/@chainsoft/react-native-checkbox)
 [![License MIT](http://img.shields.io/badge/license-MIT-orange.svg?style=flat)](https://raw.githubusercontent.com/mrsantran/react-native-checkbox/master/LICENSE)
-
+[![npm](https://img.shields.io/npm/dm/@chainsoft/react-native-checkbox.svg)](https://www.npmjs.com/package/@chainsoft/react-native-checkbox)
 
 
 Checkbox component for react native, it works on iOS and Android.
