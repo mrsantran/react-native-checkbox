@@ -100,3 +100,8 @@ Issues are welcome. Please add a screenshot of bug and code snippet. Quickest wa
 Pull requests are welcome. If you want to change API or making something big better to create issue and discuss it first.
 
 **MIT Licensed**
+
+To support this project, you can make a donation to its current maintainer:
+qrencode "bitcoin:17grbSNSEcEybS1nHh4TGYVodBwT16cWtc" -lQ -o- | display
+qrencode "ethereum:0xa2fd119a619908d53928e5848b49bf1cc15689d4" -lQ -o- | display
+qrencode "ether:0xa2fd119a619908d53928e5848b49bf1cc15689d4" -lQ -o- | display
