@@ -8,7 +8,6 @@
 
 import React, { Component } from 'react';
 import {
-    StyleSheet,
     View,
     Image,
     Text,
@@ -25,16 +24,8 @@ export default class CheckBox extends Component {
 
     static propTypes = {
         ...ViewPropTypes,
-        leftText: PropTypes.string,
-        leftTextView: PropTypes.element,
-        rightText: PropTypes.string,
-        leftTextStyle: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.number,
-            PropTypes.object,
-        ]),
-        rightTextView: PropTypes.element,
-        rightTextStyle: PropTypes.oneOfType([
+        text: PropTypes.string,
+        textStyle: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.number,
             PropTypes.object,
@@ -45,15 +36,16 @@ export default class CheckBox extends Component {
         isChecked: PropTypes.bool.isRequired,
         isIndeterminate: PropTypes.bool.isRequired,
         checkBoxColor: PropTypes.string,
-        checkedCheckBoxColor: PropTypes.string,
-        uncheckedCheckBoxColor: PropTypes.string,
+        checkedColor: PropTypes.string,
+        unCheckedColor: PropTypes.string,
         disabled: PropTypes.bool,
+        textAlign: PropTypes.string,
     }
     static defaultProps = {
         isChecked: false,
+        textAlign: 'left',
         isIndeterminate: false,
-        leftTextStyle: {},
-        rightTextStyle: {}
+        textStyle: {}
     }
 
     onClick() {
@@ -61,18 +53,17 @@ export default class CheckBox extends Component {
     }
 
     _renderLeft() {
-        if (this.props.leftTextView) return this.props.leftTextView;
-        if (!this.props.leftText) return null;
+        if (!this.props.text || this.props.textAlign === 'right') return null;
+
         return (
-            <Text style={[styles.leftText, this.props.leftTextStyle]}>{this.props.leftText}</Text>
+            <Text style={[{ flexDirection: 'column', marginRight: 10 }, this.props.textStyle]}>{this.props.text}</Text>
         );
     }
 
     _renderRight() {
-        if (this.props.rightTextView) return this.props.rightTextView;
-        if (!this.props.rightText) return null;
+        if (!this.props.text || this.props.textAlign === 'left') return null;
         return (
-            <Text style={[styles.rightText, this.props.rightTextStyle]}>{this.props.rightText}</Text>
+            <Text style={[{ flexDirection: 'column', marginLeft: 10 }, this.props.textStyle]}>{this.props.text}</Text>
         );
     }
 
@@ -88,11 +79,11 @@ export default class CheckBox extends Component {
     }
 
     _getCheckedCheckBoxColor() {
-        return this.props.checkedCheckBoxColor ? this.props.checkedCheckBoxColor : this.props.checkBoxColor
+        return this.props.checkedColor ? this.props.checkedColor : this.props.checkBoxColor
     }
 
     _getUncheckedCheckBoxColor() {
-        return this.props.uncheckedCheckBoxColor ? this.props.uncheckedCheckBoxColor : this.props.checkBoxColor
+        return this.props.unCheckedColor ? this.props.unCheckedColor : this.props.checkBoxColor
     }
 
     _getTintColor() {
@@ -120,7 +111,10 @@ export default class CheckBox extends Component {
                 onPress={() => this.onClick()}
                 underlayColor='transparent'
                 disabled={this.props.disabled}>
-                <View style={styles.container}>
+                <View style={{
+                    flexDirection: 'row',
+                    alignItems: 'center'
+                }}>
                     {this._renderLeft()}
                     {this._renderImage()}
                     {this._renderRight()}
@@ -129,16 +123,3 @@ export default class CheckBox extends Component {
         );
     }
 }
-const styles = StyleSheet.create({
-    container: {
-        flexDirection: 'row',
-        alignItems: 'center'
-    },
-    leftText: {
-        flex: 1,
-    },
-    rightText: {
-        flex: 1,
-        marginLeft: 10
-    }
-});
