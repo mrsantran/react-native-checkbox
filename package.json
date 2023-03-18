@@ -1,6 +1,6 @@
 {
   "name": "@chainsoft/react-native-checkbox",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Checkbox component for react native, it works on iOS and Android.",
   "main": "index.js",
   "scripts": {
@@ -12,11 +12,6 @@
   },
   "keywords": [
     "checkbox",
-    "react",
-    "native",
-    "checkbox",
-    "check",
-    "box",
     "react",
     "native",
     "check",
