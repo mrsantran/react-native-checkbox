@@ -1,0 +1,31 @@
+{
+  "name": "@chainsoft/react-native-checkbox",
+  "version": "0.0.1",
+  "description": "Checkbox component for react native, it works on iOS and Android.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrsantran/react-native-checkbox.git"
+  },
+  "keywords": [
+    "checkbox",
+    "react",
+    "native",
+    "checkbox",
+    "check",
+    "box",
+    "react",
+    "native",
+    "check",
+    "box"
+  ],
+  "author": "Tran Doan San",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrsantran/react-native-checkbox/issues"
+  },
+  "homepage": "https://github.com/mrsantran/react-native-checkbox#readme"
+}
