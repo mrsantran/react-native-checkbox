@@ -1,6 +1,6 @@
 {
   "name": "@chainsoft/react-native-checkbox",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Checkbox component for react native, it works on iOS and Android.",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,30 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mrsantran/react-native-checkbox.git"
+  },
+  "devDependencies": {
+    "react": "^17.0.2",
+    "react-native": "^0.66.0",
+    "release-it": "^14.11.5"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release ${version}",
+      "tagName": "v${version}"
+    },
+    "npm": {
+      "publish": true
+    },
+    "github": {
+      "release": true
+    }
+  },
+  "dependencies": {
+    "prop-types": "^15.8.1"
   },
   "keywords": [
     "checkbox",
